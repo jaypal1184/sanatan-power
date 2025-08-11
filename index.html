@@ -1,0 +1,123 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sanatan Power</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <div class="splash-logo">
+                <i class="fas fa-hands-praying"></i>
+            </div>
+            <div class="app-title">Sanatan Power</div>
+            <div class="subtitle">जय सनातन धर्म</div>
+            <div class="touch-instruction">Touch anywhere to start</div>
+        </div>
+    </div>
+
+    <!-- Main Screen -->
+    <div id="main-screen">
+        <div class="header">
+            Sanatan Power
+            <button class="language-toggle-main" id="lang-toggle-main">EN</button>
+        </div>
+        <div class="grid-container">
+            <div class="box" data-name="राधा">
+                <div class="box-icon"><i class="fas fa-pray"></i></div>
+                <div class="box-title" data-key="radha">राधा</div>
+            </div>
+            <div class="box" data-name="जय श्रीराम / राम">
+                <div class="box-icon"><i class="fas fa-hands-praying"></i></div>
+                <div class="box-title" data-key="ram">जय श्रीराम / राम</div>
+            </div>
+            <div class="box" data-name="जय हनुमान">
+                <div class="box-icon"><i class="fas fa-wind"></i></div>
+                <div class="box-title" data-key="hanuman">जय हनुमान</div>
+            </div>
+            <div class="box" data-name="ॐ गं गणपतये नमः">
+                <div class="box-icon"><i class="fas fa-elephant"></i></div>
+                <div class="box-title" data-key="ganesh">ॐ गं गणपतये नमः</div>
+            </div>
+            <div class="box" data-name="ॐ नमो भगवते वासुदेवाय">
+                <div class="box-icon"><i class="fas fa-dharmachakra"></i></div>
+                <div class="box-title" data-key="krishna">ॐ नमो भगवते वासुदेवाय</div>
+            </div>
+            <div class="box" data-name="ॐ नमो नारायणाय">
+                <div class="box-icon"><i class="fas fa-water"></i></div>
+                <div class="box-title" data-key="narayan">ॐ नमो नारायणाय</div>
+            </div>
+            <div class="box" data-name="ॐ नमः शिवाय">
+                <div class="box-icon"><i class="fas fa-mountain"></i></div>
+                <div class="box-title" data-key="shiva">ॐ नमः शिवाय</div>
+            </div>
+            <div class="box" data-name="ॐ ऐं सरस्वती नमः">
+                <div class="box-icon"><i class="fas fa-book"></i></div>
+                <div class="box-title" data-key="saraswati">ॐ ऐं सरस्वती नमः</div>
+            </div>
+            <div class="box" data-name="Coming Soon">
+                <div class="box-icon"><i class="fas fa-plus-circle"></i></div>
+                <div class="box-title" data-key="comingSoon">Coming Soon</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chant Screens -->
+    <div id="chant-screen-template" class="chant-screen">
+        <button class="back-button"><i class="fas fa-arrow-left"></i></button>
+        <h1 class="chant-title" data-key="chantTitle">Chant Name</h1>
+        <div class="counter-container">
+            <div class="counter-circle">
+                <div class="counter-name" data-key="counterName">Chant Name</div>
+                <div class="counter-value">0</div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="save-button" data-key="saveHistory">Save History</button>
+            <button class="reset-button" data-key="resetHistory">Reset History</button>
+        </div>
+        <h2 class="history-title" data-key="chantingHistory">Chanting History</h2>
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th data-key="dateTime">Date & Time</th>
+                    <th data-key="count">Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- History rows will be added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Save Confirmation Modal -->
+    <div id="save-modal" class="modal">
+        <div class="modal-content">
+            <h2 data-key="historySaved">History Saved</h2>
+            <p data-key="saveSuccess">Your chanting history has been saved successfully!</p>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel-btn" data-key="ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reset Confirmation Modal -->
+    <div id="reset-modal" class="modal">
+        <div class="modal-content">
+            <h2 data-key="confirmReset">Confirm Reset</h2>
+            <p data-key="resetWarning">Are you sure you want to reset the history? This will clear all saved records for this chant.</p>
+            <div class="modal-buttons">
+                <button class="modal-btn confirm-btn" data-key="yesReset">Yes, Reset</button>
+                <button class="modal-btn cancel-btn" data-key="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
